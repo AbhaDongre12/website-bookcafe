@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f2e4;
+  --foreground: #3c2a1f;
+  --cream-soft: #fcf8ef;
+  --border-soft: #e7dcc9;
+  --ink-dark: #3e2a1f;
+  --ink-soft: #6c5242;
+  --menu-bg: #f4e4d3;
+  --menu-border: #cfab89;
+  --menu-dark: #5b3924;
+  --menu-ink: #70452c;
+  --books-bg: #f0e9fb;
+  --books-border: #b8a0dd;
+  --books-dark: #4f2d7f;
+  --books-ink: #664094;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #f8f2e4;
+    --foreground: #3c2a1f;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.card {
+  border: 1px solid var(--border-soft);
+  background: var(--cream-soft);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.books-panel {
+  border: 1px solid var(--books-border);
+  background: #f7f1ff;
+}
+
+.menu-panel {
+  border: 1px solid var(--menu-border);
+  background: #f9efe2;
+}
